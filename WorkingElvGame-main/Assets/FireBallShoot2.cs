@@ -8,6 +8,7 @@ public class FireBallShoot2 : MonoBehaviour
     public float fireballSpeed = 10f;
     public float cooldownTime = 5f; // 5 seconds cooldown
     private bool canShoot = true; // Tracks whether Player 2 can shoot
+    public Animator Player2Animator;
 
     void Update()
     {
@@ -23,7 +24,7 @@ public class FireBallShoot2 : MonoBehaviour
         {
             GameObject fireball = Instantiate(fireballPrefab, firePoint.position, firePoint.rotation);
             Rigidbody rb = fireball.GetComponent<Rigidbody>();
-
+            Player2Animator.SetTrigger("FireShoot");
             if (rb != null)
             {
                 rb.useGravity = false; // Ensure gravity is disabled

@@ -1,24 +1,9 @@
 fileFormatVersion: 2
-guid: 0e44cfd5732d8cd408217fff2bc55bc8
+guid: a9c53f87a767704449e0bcb0f1ea96ff
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Elvis_FaceAnimMap
-    second: {fileID: 2800000, guid: 81f7d179211f6e04abc7e6c65fef97d7, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: FatElvis_diffuse
-    second: {fileID: 2800000, guid: 59c5d0932233b34419cbfcafe3264287, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: FatElvis_normal
-    second: {fileID: 2800000, guid: 4e727abd79ae1a543af1a9e4bac69369, type: 3}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -48,18 +33,18 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: mixamo.com
+      name: FireballShootAnimation
       takeName: mixamo.com
       internalID: -203655887218126122
       firstFrame: 0
-      lastFrame: 197
+      lastFrame: 85
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0

@@ -11,6 +11,8 @@ public class FirstPersonMovement : MonoBehaviour
     public bool IsRunning { get; private set; }
     public float runSpeed = 9;
     public KeyCode runningKey = KeyCode.LeftShift;
+    public Animator PlayerAnimator;
+    public float JumpDelay;
 
     private Rigidbody rigidbody;
     private bool isGrounded;
@@ -39,7 +41,8 @@ public class FirstPersonMovement : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.UpArrow) && isGrounded)
             {
-                Jump();
+                PlayerAnimator.SetTrigger("Jump");
+                Invoke("Jump", JumpDelay);
             }
         }
     }
@@ -79,5 +82,6 @@ public class FirstPersonMovement : MonoBehaviour
     {
         // Apply jump force if grounded.
         rigidbody.velocity = new Vector3(rigidbody.velocity.x, jumpForce, rigidbody.velocity.z);
+        
     }
 }
