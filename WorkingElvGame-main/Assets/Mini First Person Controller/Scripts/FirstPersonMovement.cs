@@ -43,6 +43,8 @@ public class FirstPersonMovement : MonoBehaviour
             {
                 PlayerAnimator.SetTrigger("Jump");
                 Invoke("Jump", JumpDelay);
+
+            
             }
         }
     }

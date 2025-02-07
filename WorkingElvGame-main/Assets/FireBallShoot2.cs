@@ -32,6 +32,7 @@ public class FireBallShoot2 : MonoBehaviour
             }
 
             StartCoroutine(FireballCooldown()); // Start cooldown timer
+
         }
     }
 
