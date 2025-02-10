@@ -1,23 +1,33 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Player1Health : MonoBehaviour
 {
     public Slider healthSlider;
     public int maxHealth = 100;
     private int currentHealth;
+
     void Start()
     {
         currentHealth = maxHealth;
         healthSlider.maxValue = maxHealth;
         healthSlider.value = currentHealth;
     }
+
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
         healthSlider.value = currentHealth;
+
+        if (currentHealth == 0)
+        {
+            // Load the "Player2Win" scene when Player1Health reaches 0
+            SceneManager.LoadScene("Player2Win");
+        }
     }
+
     public void Heal(int amount)
     {
         currentHealth += amount;
